@@ -1,2 +1,7 @@
-﻿// See https://aka.ms/new-console-template for more information
+﻿using CNFSimulator;
+using Newtonsoft.Json;
+
 Console.WriteLine("Hello, World!");
+
+Grammar G = JsonConvert.DeserializeObject<Grammar>(File.ReadAllText("Input.json"));
+Console.WriteLine("Done");

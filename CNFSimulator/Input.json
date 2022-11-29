@@ -1,0 +1,52 @@
+﻿{
+  "Variables": [
+    "S",
+    "A",
+    "B",
+    "T",
+    "X"
+  ],
+  "Terminals": [
+    "a",
+    "b"
+  ],
+  "Rules": [
+    {
+      "Start": "S",
+      "Productions": [
+        [ "A", "B" ],
+        [ "X", "B" ]
+      ]
+    },
+    {
+      "Start": "T",
+      "Productions": [
+        [ "A", "B" ],
+        [ "X", "B" ]
+      ]
+    },
+    {
+      "Start": "X",
+      "Productions": [
+        [ "A", "T" ]
+      ]
+    },
+    {
+      "Start": "A",
+      "Productions": [
+        [ "a" ]
+      ]
+    },
+    {
+      "Start": "B",
+      "Productions": [
+        [ "b" ]
+      ]
+    }
+  ],
+  "Start": "S",
+  "Inputs": [
+    "aaabbb",
+    "bababa"
+  ]
+}
