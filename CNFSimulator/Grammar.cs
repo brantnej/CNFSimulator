@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ConsoleTables;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -40,6 +41,19 @@ namespace CNFSimulator
                     }
                 }
             }
+            var outputTable = new ConsoleTable(Enumerable.Range(1, input.Length).Select(n => n.ToString()).ToArray());
+            for (int i = 1; i <= input.Length; i++)
+            {
+                outputTable.AddRow(Enumerable.Range(1, input.Length)
+                    .Select(x => Table[i, x])
+                    .Select(cell =>
+                    {
+                        if (cell is null) return string.Empty;
+                        else if (cell.Any()) return string.Join(",", cell);
+                        return "NULL";
+                    }).ToArray());
+            }
+            outputTable.Write();
             return Table[1, input.Length].Contains(Start);
         }
     }
