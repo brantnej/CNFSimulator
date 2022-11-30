@@ -44,9 +44,5 @@
       ]
     }
   ],
-  "Start": "S",
-  "Inputs": [
-    "aaabbb",
-    "bababa"
-  ]
+  "Start": "S"
 }
