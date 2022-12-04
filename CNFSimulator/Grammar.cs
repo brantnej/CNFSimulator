@@ -2,6 +2,11 @@
 
 namespace CNFSimulator
 {
+    /// <summary>
+    /// Represents a CNF grammar. Tracks the variables, terminals, rules, and start symbol.
+    /// Can validate that the grammar is in CNF and can check if a string would be accepted
+    /// using the CYK algorithm.
+    /// </summary>
     public class Grammar
     {
         /// <summary>
