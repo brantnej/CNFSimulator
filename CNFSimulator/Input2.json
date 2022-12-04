@@ -1,54 +1,46 @@
-{
+﻿{
   "Variables": [
     "S",
     "A",
     "B",
-    "C",
-    "D"
+    "T",
+    "X"
   ],
   "Terminals": [
     "a",
-    "b",
-    "c"
+    "b"
   ],
   "Rules": [
     {
       "Start": "S",
       "Productions": [
         [ "A", "B" ],
-        [ "A", "D" ],
-        [ "A", "C" ]
+        [ "X", "B" ]
+      ]
+    },
+    {
+      "Start": "T",
+      "Productions": [
+        [ "A", "B" ],
+        [ "X", "B" ]
+      ]
+    },
+    {
+      "Start": "X",
+      "Productions": [
+        [ "A", "T" ]
       ]
     },
     {
       "Start": "A",
       "Productions": [
-        [ "A", "A" ],
         [ "a" ]
       ]
     },
     {
       "Start": "B",
       "Productions": [
-        [ "B", "B" ],
-        [ "A", "B" ],
         [ "b" ]
-      ]
-    },
-    {
-      "Start": "C",
-      "Productions": [
-        [ "A", "C" ],
-        [ "D", "C" ],
-        [ "c" ]
-      ]
-    },
-    {
-      "Start": "D",
-      "Productions": [
-        [ "D", "D" ],
-        [ "b" ],
-        [ "c" ]
       ]
     }
   ],

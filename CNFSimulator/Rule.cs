@@ -8,7 +8,7 @@ namespace CNFSimulator
 {
     public class Rule
     {
-        public string Start { get; set; }
-        public IEnumerable<IEnumerable<string>> Productions { get; set; }
+        public char Start { get; set; }
+        public IEnumerable<IEnumerable<char>> Productions { get; set; }
     }
 }
