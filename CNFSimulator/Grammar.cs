@@ -31,6 +31,10 @@ namespace CNFSimulator
         /// <exception cref="ArgumentException">Thrown if Grammar is not in CNF. Describes why it is not valid.</exception>
         public void ValidateGrammar()
         {
+            if (Variables.Intersect(Terminals).Count() != 0)
+            {
+                throw new ArgumentException("Some symbols are both terminals and variables");
+            }
             if (!Variables.Contains(Start))
             {
                 throw new ArgumentException("Start symbol is not a variable");
